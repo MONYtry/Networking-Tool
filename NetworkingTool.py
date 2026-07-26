@@ -131,7 +131,8 @@ def checkOpenPorts():
     clearConsole()
     
     if len(open_ports) > 0:
-        type_text("Open Ports:",0.03)
+        type_text(f"Open Ports: {open_ports}",0.03)
+        
         # Erstellt MAXIMUM 200 Threads 
         for port in open_ports:
         
@@ -158,9 +159,11 @@ def get_http_banner(host, port):
         s.send(b"GET / HTTP/1.1\r\nHost: " + host.encode() + b"\r\n\r\n")
         answer = s.recv(1024)
         s.close()
+
         shortAnswer = answer.decode(errors="ignore")
         status = shortAnswer.split("\n")[0]
         print("Status: ",status)
+
     except Exception as e:
         print("Fehler",e)
 
@@ -170,7 +173,7 @@ def get_service_banner(host, port):
 
     s = socket.socket()
     s.settimeout(3)
-
+    
     try:
         s.connect((host, port))
 
@@ -199,7 +202,7 @@ def get_service_banner(host, port):
 
 def ftp_login():
     
-    # Login Credentails
+    # Login Input
     host = input("IPv4 / Domain")
     port = input("Port: ")
     username = input("Username: ")
@@ -249,7 +252,7 @@ def ftp_login():
         s.send(b"PWD\r\n")
         print(s.recv(1024).decode())
         if login.startswith("230"):
-            print("✅ Erfolgreich eingeloggt")            
+            print(f"{GREEN}Erfolgreich eingeloggt")            
             
             s.send(b"HELP\r\n")
             while True:
@@ -260,10 +263,10 @@ def ftp_login():
                     break
 
         elif login.startswith("530"):
-            print("❌ Login fehlgeschlagen")
+            print(f"{RED}Login fehlgeschlagen")
 
         else:
-            print("⚠ Unbekannte Antwort")
+            print(f"{BLUE}Unbekannte Antwort")
 
 
     except TimeoutError:
