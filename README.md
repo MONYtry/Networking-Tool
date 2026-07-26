@@ -1,147 +1,201 @@
 # 🌐 Python Networking Toolkit
 
-Ein leistungsstarkes Kommandozeilen-Tool zur Analyse von Netzwerken und Systemen, entwickelt in **Python**. Das Projekt dient als Demonstration meiner Kenntnisse in den Bereichen **Netzwerkprogrammierung**, **Multithreading**, **Socket-Programmierung**, **Systemanalyse** und **Python-Entwicklung**.
+<p align="center">
+  <b>A powerful Python-based network analysis and system monitoring toolkit.</b>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python">
+  <img src="https://img.shields.io/badge/Networking-TCP%2FSockets-green?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Security-TLS-orange?style=for-the-badge">
+  <img src="https://img.shields.io/badge/License-MIT-purple?style=for-the-badge">
+</p>
 
 ---
 
-# 📌 Projektbeschreibung
+# 🚀 Overview
 
-Dieses Projekt vereint mehrere Werkzeuge zur Netzwerkdiagnose in einer einzigen Anwendung. Ziel war es, grundlegende Netzwerkprotokolle sowie die Kommunikation zwischen Client und Server praktisch umzusetzen und dabei performante sowie übersichtliche Lösungen zu entwickeln.
+**Python Networking Toolkit** is a command-line based network analysis and system monitoring application developed in **Python 3**.
 
-Der Fokus lag dabei auf:
+The project combines multiple networking utilities into one modular tool, focusing on practical experience with:
 
-* Entwicklung einer modularen Python-Anwendung
-* Einsatz von Multithreading für performante Portscans
-* Arbeiten mit TCP-Sockets
-* Kommunikation über verschiedene Netzwerkprotokolle
-* Verarbeitung von Systeminformationen
-* Strukturierter Aufbau einer Konsolenanwendung
+- 🌐 Network programming
+- 🔌 TCP socket communication
+- ⚡ Multithreading and performance optimization
+- 🔐 Secure communication using TLS
+- 💻 System information analysis
+- 🐍 Clean and structured Python development
 
----
-
-# 🚀 Funktionen
-
-## 📡 Ping-Test
-
-Überprüfung der Erreichbarkeit eines Hosts mittels ICMP-Ping.
-
-**Features**
-
-* Erreichbarkeit von IPv4-Adressen prüfen
-* Übersichtliche Statusausgabe
-* Schnelle Fehlererkennung
+The goal of this project was to create a practical toolkit that demonstrates real-world usage of Python for networking, system analysis, and automation.
 
 ---
 
-## 🔍 Multithread-Portscanner
+# ✨ Features
 
-Eigenentwickelter TCP-Portscanner mit paralleler Ausführung.
-
-**Features**
-
-* Frei wählbarer Portbereich
-* Mehrere Threads gleichzeitig
-* Erkennung offener Ports
-* Schnelle Scanzeiten
-
----
-
-## 🛰 Service-Erkennung (Banner Grabbing)
-
-Nach dem Finden offener Ports wird versucht, den laufenden Netzwerkdienst anhand seines Banners zu identifizieren.
-
-Unterstützte Dienste:
-
-* SSH
-* FTP
-* SMTP
-* unbekannte TCP-Dienste
+| Feature | Description |
+|---|---|
+| 📡 Ping Tester | Checks host availability using ICMP requests |
+| 🔍 Multithread Port Scanner | Scans TCP ports with parallel execution |
+| 🛰 Banner Grabbing | Identifies running services through server responses |
+| 🔐 FTP over TLS | Establishes encrypted FTP connections |
+| 💻 System Information | Collects detailed Windows system data |
+| 📊 Live System Monitor | Displays CPU and RAM usage in real time |
+| ⚡ Optimized Scanning | Uses multithreading for faster execution |
 
 ---
 
-## 🔐 FTP-Verbindung über TLS
+# 🛠 Technologies Used
 
-Implementierung einer verschlüsselten FTP-Verbindung.
+## Programming Language
 
-Funktionen:
+- 🐍 Python 3
 
-* AUTH TLS
-* Login mit Benutzername und Passwort
-* TLS-Verschlüsselung
-* Auslesen von Serverantworten
-* Kommunikation über FTP-Befehle
+## Libraries
 
----
-
-## 💻 Systeminformationen
-
-Auslesen relevanter Windows-Systeminformationen.
-
-Beispielsweise:
-
-* Betriebssystem
-* Hostname
-* Registrierter Benutzer
-* vollständige Systeminformationen
+| Library | Purpose |
+|---|---|
+| `socket` | Network communication |
+| `ssl` | TLS encryption |
+| `concurrent.futures` | Multithreading |
+| `subprocess` | System commands |
+| `psutil` | Hardware monitoring |
+| `datetime` | Time handling |
+| `os` | Operating system functions |
 
 ---
 
-## 📊 Live-Systemmonitor
+# 📌 Project Description
 
-Anzeige wichtiger Hardwareinformationen in Echtzeit.
+This project combines different networking and system analysis tools into one lightweight command-line application.
 
-* CPU-Auslastung
-* Arbeitsspeicher
-* Aktualisierung im Sekundentakt
+The main focus was implementing:
 
----
+- Modular Python architecture
+- TCP client/server communication
+- Network protocol handling
+- Parallel processing
+- Secure connections
+- System monitoring
+- Error handling
 
-# 🛠 Verwendete Technologien
-
-| Technologie        | Einsatz                   |
-| ------------------ | ------------------------- |
-| Python 3           | Programmiersprache        |
-| socket             | Netzwerkkommunikation     |
-| ssl                | TLS-Verschlüsselung       |
-| concurrent.futures | Multithreading            |
-| subprocess         | Systembefehle             |
-| psutil             | Hardware- und Systemdaten |
-| datetime           | Zeitstempel               |
-| os                 | Betriebssystemfunktionen  |
+The project demonstrates how Python can be used to interact with networks, analyze services, and automate system-related tasks.
 
 ---
 
-# 📚 Lernziele
+# 🚀 Main Components
 
-Mit diesem Projekt konnte ich praktische Erfahrungen sammeln in:
+## 📡 Ping Tester
 
-* Objektorientierter und modularer Python-Entwicklung
-* Netzwerkkommunikation über TCP
-* Socket-Programmierung
-* Multithreading
-* Verarbeitung von Serverantworten
-* Konsolenanwendungen
-* Fehlerbehandlung
-* Arbeiten mit Betriebssystemfunktionen
-* Performanceoptimierung
+A simple network availability checker.
+
+### Features
+
+- IPv4 host verification
+- Connection status output
+- Fast network diagnostics
 
 ---
 
-# ▶️ Installation
+## 🔍 Multithreaded Port Scanner
 
-Repository klonen
+A custom TCP port scanner using parallel threads.
+
+### Features
+
+- Custom port ranges
+- Multiple simultaneous connections
+- Detection of open ports
+- Improved scanning performance
+
+---
+
+## 🛰 Service Detection
+
+Attempts to identify services running on discovered open ports.
+
+Supported examples:
+
+- SSH
+- FTP
+- SMTP
+- Unknown TCP services
+
+---
+
+## 🔐 Secure FTP Connection
+
+Implementation of encrypted FTP communication.
+
+### Features
+
+- AUTH TLS support
+- Secure login
+- TLS encryption
+- Server response handling
+- FTP command communication
+
+---
+
+## 💻 System Information Module
+
+Collects important Windows system information.
+
+Includes:
+
+- Operating system details
+- Hostname
+- Registered user
+- General system information
+
+---
+
+## 📊 Live System Monitor
+
+Displays real-time hardware statistics.
+
+Monitors:
+
+- CPU usage
+- RAM usage
+- System performance
+
+---
+
+# 📚 Skills & Experience
+
+Through this project, I improved my knowledge in:
+
+- `Python development`
+- `Network programming`
+- `TCP/IP communication`
+- `Socket programming`
+- `Multithreading`
+- `System administration`
+- `Secure programming`
+- `Performance optimization`
+- `Git & GitHub workflow`
+
+---
+
+# ⚙️ Installation
+
+## 1. Clone Repository
 
 ```bash
-git clone https://github.com/DEIN-NAME/Python-Networking-Toolkit.git
+git clone https://github.com/USERNAME/Python-Networking-Toolkit.git
 ```
 
-Abhängigkeiten installieren
+---
+
+## 2. Install Requirements
 
 ```bash
 pip install psutil
 ```
 
-Programm starten
+---
+
+## 3. Start Application
 
 ```bash
 python main.py
@@ -149,25 +203,38 @@ python main.py
 
 ---
 
-# ⚠ Hinweis
+# ⚠ Security Notice
 
-Dieses Projekt wurde ausschließlich zu Lern-, Analyse- und Demonstrationszwecken entwickelt.
+This project was created for **educational and demonstration purposes only**.
 
-Netzwerkscans oder Verbindungsversuche sollten ausschließlich auf Systemen durchgeführt werden, für die eine ausdrückliche Berechtigung vorliegt.
+Network scanning and connection attempts should only be performed on systems where you have explicit permission.
 
 ---
 
-# 👨‍💻 Über dieses Projekt
+# 👨‍💻 Author
 
-Dieses Projekt entstand, um meine Kenntnisse im Bereich **Python**, **Netzwerkprogrammierung** und **Systementwicklung** praxisnah zu vertiefen.
+Created by **MONYtry**
 
-Besonderer Wert wurde auf eine verständliche Struktur, modulare Programmierung und die praktische Anwendung verschiedener Python-Bibliotheken gelegt.
+## About Me
 
-Es dient gleichzeitig als Portfolio-Projekt und zeigt meine Fähigkeiten in den Bereichen:
+Interested in:
 
-* Python
-* Netzwerktechnik
-* Multithreading
-* Systemprogrammierung
-* Fehleranalyse
-* Softwareentwicklung
+- 🐍 Python Development
+- 🌐 Networking
+- 🔐 Cybersecurity
+- ⚙️ Automation
+- 💻 System Programming
+
+---
+
+# ⭐ Purpose
+
+This project was created to deepen practical knowledge in **Python, networking, and system development**.
+
+It serves as both a learning project and a portfolio demonstration of skills in:
+
+- Network engineering
+- Software development
+- Security concepts
+- System analysis
+- Automation
