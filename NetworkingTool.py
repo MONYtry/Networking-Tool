@@ -1,5 +1,7 @@
 ###################
 # NETWORKING TOOL #
+#  MADE BY MONY   #
+# github/MONYtry  #
 ###################
 
 
@@ -34,6 +36,7 @@ def clearConsole():
     os.system("cls")
 
 # ============== HEADER ============== #
+# HAHAH bitte ignoriert dieses Kiddo "FSOCIETY" xD
 def header():
     clearConsole()
     type_text(RED + f"""
