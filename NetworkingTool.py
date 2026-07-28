@@ -119,7 +119,7 @@ def checkOpenPorts():
 
         result = s.connect_ex((target, port))
         if result == 0:
-            print(f"{RESET}Port offen: {BLUE}{port}")
+            print(f"{RESET} [+] Port {BLUE}{port} {RESET}open")
             open_ports.append(port)
             
 
@@ -154,7 +154,7 @@ def get_http_banner(host, port):
     try:
         # Erstellt Verbindung zwischen User und Server
         s = socket.socket()
-
+        s.settimeout(1)
         # Verbindet sich
         s.connect((host, port))
         
